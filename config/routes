@@ -8,3 +8,5 @@
 /especies                           EspeciesR               GET
 /especies/cadastrar                 EspeciesCadastrarR      GET POST
 /especies/#EspeciesId/deletar       EspeciesDeletarR        POST
+
+/equipamentos/cadastrar             EquipamentosCadastrarR  GET POST

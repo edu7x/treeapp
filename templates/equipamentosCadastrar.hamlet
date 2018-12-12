@@ -1,0 +1,10 @@
+$maybe msg <- mensagem
+            <div class="alert alert-danger">
+                #{msg}
+                
+<h1>Equipamento
+
+<form action=@{EquipamentosCadastrarR} method=post enctype=#{enctype}>
+        ^{widgetForm}
+        <input type="submit" value="Enviar">
+        

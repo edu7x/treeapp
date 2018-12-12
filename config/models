@@ -5,3 +5,9 @@ Especies json
     nomeCientifico      Text
     deriving Show
 
+Equipamentos json
+    descricao           Text
+    modelo              Text
+    sistemaOperacional  Text
+    versaoSO            Text
+    deriving Show
