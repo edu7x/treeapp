@@ -15,10 +15,14 @@
                         <h3 class="masthead-brand">Início
                         <nav class="nav nav-masthead justify-content-center">
                             <a class="nav-link active" href=@{HomeR}>Início
+                            <a class="nav-link" href=@{ArvoresCadastrarR}>Cadastre uma Arvore
+                            <a class="nav-link" href=@{ArvoresR}>Arvores
                             <a class="nav-link" href=@{EspeciesCadastrarR}>Cadastrar Especies
                             <a class="nav-link" href=@{EspeciesR}>Especies
                             <a class="nav-link" href=@{EquipamentosCadastrarR}>Cadastrar Equipamentos
                             <a class="nav-link" href=@{EquipamentosR}>Equipamentos
+                            <a class="nav-link" href=@{AreasCadastrarR}>Cadastrar Areas
+                            <a class="nav-link" href=@{AreasR}>Areas
             
             <main role="main" class="inner cover">
                 <h1 class="cover-heading">Cadastre uma Arvore
