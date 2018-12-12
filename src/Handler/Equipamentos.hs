@@ -18,6 +18,7 @@ formEquipamentos = renderBootstrap $ Equipamentos
 getEquipamentosCadastrarR :: Handler Html
 getEquipamentosCadastrarR = do 
     (widgetForm, enctype) <- generateFormPost formEquipamentos
+    logado <- lookupSession "_USR"
     mensagem <- getMessage
     defaultLayout $ do 
         addStylesheet $ StaticR css_bootstrap_css
@@ -51,6 +52,7 @@ postEquipamentosCadastrarR = do
 getEquipamentosR :: Handler Html
 getEquipamentosR = do 
     equipamentos <- runDB $ selectList [] [Asc EquipamentosModelo]
+    logado <- lookupSession "_USR"
     defaultLayout $ do 
         addStylesheet $ StaticR css_bootstrap_css
         $(whamletFile "templates/equipamentos.hamlet")
