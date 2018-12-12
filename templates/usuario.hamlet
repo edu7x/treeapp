@@ -1,0 +1,25 @@
+<body class="text-center">  
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                        <h3 class="masthead-brand">Início
+                        <nav class="nav nav-masthead justify-content-center">
+                            <a class="nav-link active" href=@{HomeR}>Início
+                            <a class="nav-link" href=@{ArvoresCadastrarR}>Cadastre uma Arvore
+                            <a class="nav-link" href=@{ArvoresR}>Arvores
+                            <a class="nav-link" href=@{EspeciesCadastrarR}>Cadastrar Especies
+                            <a class="nav-link" href=@{EspeciesR}>Especies
+                            <a class="nav-link" href=@{EquipamentosCadastrarR}>Cadastrar Equipamentos
+                            <a class="nav-link" href=@{EquipamentosR}>Equipamentos
+                            <a class="nav-link" href=@{AreasCadastrarR}>Cadastrar Areas
+                            <a class="nav-link" href=@{AreasR}>Areas
+
+$maybe msg <- mensagem
+    <div class="alert alert-danger">
+        #{msg}
+
+
+<form action=@{UsuarioR} method=post enctype=#{enctype}>
+    ^{widgetForm}
+    <input type="submit" value="Cadastrar">
+    

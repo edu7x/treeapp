@@ -32,3 +32,9 @@ Arvores json
     altitude            Text
     acuraciaAltitude    Text
     deriving Show
+    
+Usuarios json
+    nome                Text
+    email               Text
+    senha               Text
+    deriving Show

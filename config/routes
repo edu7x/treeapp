@@ -20,3 +20,5 @@
 /arvores                                    ArvoresR                GET
 /arvores/cadastrar                          ArvoresCadastrarR       GET POST
 /arvores/#ArvoresId/deletar                 ArvoresDeletarR         POST
+
+/usuario                                    UsuarioR                GET POST
