@@ -33,6 +33,8 @@
                         Altitude
                     <th>
                         A.Altitude
+                    <th>
+                        Deletar?
         
             <tbody>
                 $forall Entity aid arvore <- arvores
@@ -54,3 +56,6 @@
                             #{arvoresAltitude arvore}
                         <td>
                             #{arvoresAcuraciaAltitude arvore}
+                        <td>
+                            <form action=@{ArvoresDeletarR aid} method=post>
+                                <input type="submit" value="X">

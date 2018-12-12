@@ -51,3 +51,8 @@ getArvoresR = do
     defaultLayout $ do 
         addStylesheet $ StaticR css_bootstrap_css
         $(whamletFile "templates/arvores.hamlet")
+        
+postArvoresDeletarR :: ArvoresId -> Handler Html 
+postArvoresDeletarR arvore_id = do
+    runDB $ delete arvore_id
+    redirect ArvoresR
