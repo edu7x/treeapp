@@ -1,5 +1,5 @@
 {-# LANGUAGE PackageImports #-}
-import "aulahaskell" Application (develMain)
+import "treeapp" Application (develMain)
 import Prelude (IO)
 
 main :: IO ()
