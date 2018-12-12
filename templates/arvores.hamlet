@@ -13,6 +13,11 @@
                             <a class="nav-link" href=@{EquipamentosR}>Equipamentos
                             <a class="nav-link" href=@{AreasCadastrarR}>Cadastrar Areas
                             <a class="nav-link" href=@{AreasR}>Areas
+                            $maybe _ <- logado
+                                <form action=@{LogoutR} method=post>
+                                    <input type="submit" value="Logout">
+                            $nothing
+                                <a class="nav-link" href=@{LoginR}>Login
         
         <table class="table table-striped">
             <thead>

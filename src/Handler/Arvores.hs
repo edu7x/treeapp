@@ -28,6 +28,7 @@ espLista = do
 getArvoresCadastrarR :: Handler Html
 getArvoresCadastrarR = do 
     (widget, enctype) <- generateFormPost formArvores
+    logado <- lookupSession "_USR"
     defaultLayout $ do 
         addStylesheet $ StaticR css_bootstrap_css
         toWidgetHead $(juliusFile "templates/arvoresCadastrar.julius")
@@ -50,6 +51,7 @@ getArvoresR = do
     arvores <- runDB $ selectList [] []
     prodids <- return $ fmap (\m -> arvoresEspecie $ entityVal m) arvores
     especies <- runDB $ selectList [EspeciesId <-. prodids][]
+    logado <- lookupSession "_USR"
     defaultLayout $ do 
         addStylesheet $ StaticR css_bootstrap_css
         $(whamletFile "templates/arvores.hamlet")
