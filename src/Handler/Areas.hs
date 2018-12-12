@@ -52,7 +52,8 @@ postAreasCadastrarR = do
         _ -> redirect AreasR
 
 getAreasR :: Handler Html
-getAreasR = do 
+getAreasR = do
+    logado <- lookupSession "_USR"
     areas <- runDB $ selectList [] [Asc AreasDescricao]
     defaultLayout $ do 
         addStylesheet $ StaticR css_bootstrap_css
