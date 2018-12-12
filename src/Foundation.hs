@@ -30,7 +30,7 @@ instance Yesod App where
     isAuthorized (StaticR _) _ = return Authorized
     isAuthorized LoginR _ = return Authorized
     isAuthorized UsuarioR _ = return Authorized
-    isAuthorized _ _ = ehUsuario
+    isAuthorized _ _ = isUsuario
 
 instance YesodPersist App where
     type YesodPersistBackend App = SqlBackend
@@ -44,8 +44,8 @@ instance RenderMessage App FormMessage where
 instance HasHttpManager App where
     getHttpManager = appHttpManager
 
-ehUsuario :: Handler AuthResult
-ehUsuario = do 
+isUsuario :: Handler AuthResult
+isUsuario = do 
     logado <- lookupSession "_USR"
     case logado of 
         Just _ -> return Authorized
