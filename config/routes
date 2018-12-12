@@ -1,13 +1,14 @@
-/static                             StaticR                 Static appStatic
+/static                                     StaticR                 Static appStatic
 
-/favicon.ico                        FaviconR                GET
-/robots.txt                         RobotsR                 GET
+/favicon.ico                                FaviconR                GET
+/robots.txt                                 RobotsR                 GET
 
-/                                   HomeR                   GET 
+/                                           HomeR                   GET 
 
-/especies                           EspeciesR               GET
-/especies/cadastrar                 EspeciesCadastrarR      GET POST
-/especies/#EspeciesId/deletar       EspeciesDeletarR        POST
+/especies                                   EspeciesR               GET
+/especies/cadastrar                         EspeciesCadastrarR      GET POST
+/especies/#EspeciesId/deletar               EspeciesDeletarR        POST
 
-/equipamentos                       EquipamentosR           GET
-/equipamentos/cadastrar             EquipamentosCadastrarR  GET POST
+/equipamentos                               EquipamentosR           GET
+/equipamentos/cadastrar                     EquipamentosCadastrarR  GET POST
+/equipamentos/#EquipamentosId/deletar       EquipamentosDeletarR    POST

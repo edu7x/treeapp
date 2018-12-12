@@ -9,9 +9,11 @@
                 Sistema Operacional
             <th>
                 Versão
+            <th>
+                Deletar?
 
     <tbody>
-        $forall (Entity _ equipamento) <- equipamentos
+        $forall (Entity equip_id equipamento) <- equipamentos
             <tr>
                 <td>
                     #{equipamentosDescricao equipamento}
@@ -21,3 +23,6 @@
                     #{equipamentosSistemaOperacional equipamento}
                 <td>
                     #{equipamentosVersaoSO equipamento}
+                <td>
+                    <form action=@{EquipamentosDeletarR equip_id} method=post>
+                        <input type="submit" value="X">

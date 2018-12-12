@@ -54,3 +54,8 @@ getEquipamentosR = do
     defaultLayout $ do 
         addStylesheet $ StaticR css_bootstrap_css
         $(whamletFile "templates/equipamentos.hamlet")
+        
+postEquipamentosDeletarR :: EquipamentosId -> Handler Html 
+postEquipamentosDeletarR equipid = do
+    runDB $ delete equipid
+    redirect EquipamentosR
