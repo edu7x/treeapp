@@ -8,4 +8,7 @@ module Handler.Home where
 import Import
 
 getHomeR :: Handler Html
-getHomeR = undefined
+getHomeR = do 
+    defaultLayout $ do 
+        addStylesheet $ StaticR css_bootstrap_css
+        $(whamletFile "templates/homepage.hamlet")
