@@ -8,6 +8,7 @@ module Handler.Arvores where
 
 import Import
 import Text.Read (read)
+import Text.Julius
 
 formArvores :: Html -> MForm Handler (FormResult Arvores, Widget)
 formArvores = renderBootstrap $ Arvores
@@ -29,6 +30,7 @@ getArvoresCadastrarR = do
     (widget, enctype) <- generateFormPost formArvores
     defaultLayout $ do 
         addStylesheet $ StaticR css_bootstrap_css
+        toWidgetHead $(juliusFile "templates/arvoresCadastrar.julius")
         $(whamletFile "templates/arvoresCadastrar.hamlet")
         
 postArvoresCadastrarR :: Handler Html

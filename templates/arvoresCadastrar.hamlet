@@ -19,6 +19,6 @@
 
 <form class="form-signin" action=@{ArvoresCadastrarR} method=post enctype=#{enctype}>
         <h1 class="h3 mb-3 font-weight-normal">Cadastrar Arvore
+        <button onclick="watchLocation()">Inserir Localização
         ^{widget}
         <input type="submit" value="Enviar">
-    

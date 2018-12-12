@@ -1,0 +1,11 @@
+function watchLocation(){
+    navigator.geolocation.getCurrentPosition(function(x){
+        document.getElementById("hident2").value = x.coords.latitude
+        document.getElementById("hident3").value = x.coords.longitude
+        document.getElementById("hident7").value = x.coords.accuracy
+        document.getElementById("hident8").value = x.coords.altitude
+        document.getElementById("hident9").value = x.coords.altitudeAccuracy
+        //document.getElementById("hident7").value = timestamp
+    });
+    
+}
