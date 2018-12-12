@@ -5,11 +5,16 @@
                 Nome Científico
             <th>
                 Nome Popular
+            <th>
+                Deletar?
     <tbody>
-        $forall (Entity _ especie) <- especies
+        $forall (Entity esp_id especie) <- especies
             <tr>
                 <td>
                     #{especiesNomeCientifico especie}
             
                 <td>
                     #{especiesNomePopular especie}
+                <td>
+                    <form action=@{EspeciesDeletarR esp_id} method=post>
+                        <input type="submit" value="X">

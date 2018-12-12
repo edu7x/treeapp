@@ -52,3 +52,8 @@ getEspeciesR = do
     defaultLayout $ do 
         addStylesheet $ StaticR css_bootstrap_css
         $(whamletFile "templates/especies.hamlet")
+        
+postEspeciesDeletarR :: EspeciesId -> Handler Html 
+postEspeciesDeletarR espid = do
+    runDB $ delete espid
+    redirect EspeciesR
