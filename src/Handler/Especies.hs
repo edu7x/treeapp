@@ -43,5 +43,12 @@ postEspeciesCadastrarR = do
                         <h1>
                             Especie cadastrada com sucesso!
                     |]
-                    redirect EspeciesCadastrarR
-        _ -> redirect EspeciesCadastrarR
+                    redirect EspeciesR
+        _ -> redirect EspeciesR
+        
+getEspeciesR :: Handler Html
+getEspeciesR = do 
+    especies <- runDB $ selectList [] [Asc EspeciesNomeCientifico]
+    defaultLayout $ do 
+        addStylesheet $ StaticR css_bootstrap_css
+        $(whamletFile "templates/especies.hamlet")

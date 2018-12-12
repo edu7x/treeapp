@@ -5,4 +5,5 @@
 
 / HomeR GET 
 
+/especies               EspeciesR               GET
 /especies/cadastrar     EspeciesCadastrarR      GET POST

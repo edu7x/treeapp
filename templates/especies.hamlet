@@ -1,0 +1,15 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Nome Científico
+            <th>
+                Nome Popular
+    <tbody>
+        $forall (Entity _ especie) <- especies
+            <tr>
+                <td>
+                    #{especiesNomeCientifico especie}
+            
+                <td>
+                    #{especiesNomePopular especie}
