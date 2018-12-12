@@ -15,8 +15,10 @@
                 Latitude Ponto 3
             <th>
                 Longitude Ponto 3
+            <th>
+                Deletar?
     <tbody>
-        $forall (Entity _ area) <- areas
+        $forall (Entity area_id area) <- areas
             <tr>
                 <td>
                     #{areasDescricao area}
@@ -32,3 +34,6 @@
                     #{areasLatitude3 area}
                 <td>
                     #{areasLongitude3 area}
+                <td>
+                    <form action=@{AreasDeletarR area_id} method=post>
+                        <input type="submit" value="X">

@@ -55,3 +55,8 @@ getAreasR = do
     defaultLayout $ do 
         addStylesheet $ StaticR css_bootstrap_css
         $(whamletFile "templates/areas.hamlet")
+        
+postAreasDeletarR :: AreasId -> Handler Html 
+postAreasDeletarR area_id = do
+    runDB $ delete area_id
+    redirect AreasR
