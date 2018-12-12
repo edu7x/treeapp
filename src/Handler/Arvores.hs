@@ -41,4 +41,13 @@ postArvoresCadastrarR = do
                 <h1>
                     Arvore cadastrada!
             |]
-            redirect ArvoresCadastrarR
+            redirect ArvoresR
+            
+getArvoresR :: Handler Html
+getArvoresR = do
+    arvores <- runDB $ selectList [] []
+    prodids <- return $ fmap (\m -> arvoresEspecie $ entityVal m) arvores
+    especies <- runDB $ selectList [EspeciesId <-. prodids][]
+    defaultLayout $ do 
+        addStylesheet $ StaticR css_bootstrap_css
+        $(whamletFile "templates/arvores.hamlet")

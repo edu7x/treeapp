@@ -7,6 +7,7 @@
                     <nav class="nav nav-masthead justify-content-center">
                         <a class="nav-link active" href=@{HomeR}>Início
                         <a class="nav-link" href=@{ArvoresCadastrarR}>Cadastre uma Arvore
+                        <a class="nav-link" href=@{ArvoresR}>Arvores
                         <a class="nav-link" href=@{EspeciesCadastrarR}>Cadastrar Especies
                         <a class="nav-link" href=@{EspeciesR}>Especies
                         <a class="nav-link" href=@{EquipamentosCadastrarR}>Cadastrar Equipamentos
