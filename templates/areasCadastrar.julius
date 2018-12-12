@@ -1,0 +1,20 @@
+function getLocal1(){
+    navigator.geolocation.getCurrentPosition(function(x){
+        document.getElementById("hident3").value = x.coords.latitude
+        document.getElementById("hident4").value = x.coords.longitude
+    });
+}
+
+function getLocal2(){
+    navigator.geolocation.getCurrentPosition(function(x){
+        document.getElementById("hident5").value = x.coords.latitude
+        document.getElementById("hident6").value = x.coords.longitude
+    });
+}
+
+function getLocal3(){
+    navigator.geolocation.getCurrentPosition(function(x){
+        document.getElementById("hident7").value = x.coords.latitude
+        document.getElementById("hident8").value = x.coords.longitude
+    });
+}

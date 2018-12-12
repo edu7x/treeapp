@@ -3,5 +3,8 @@ $maybe msg <- mensagem
         #{msg}
 
 <form action=@{AreasCadastrarR} method=post enctype=#{enctype}>
+    <button onclick="getLocal1()">Inserir Ponto 1
+    <button onclick="getLocal2()">Inserir Ponto 2
+    <button onclick="getLocal3()">Inserir Ponto 3
     ^{widgetForm}
     <input type="submit" value="Cadastrar">

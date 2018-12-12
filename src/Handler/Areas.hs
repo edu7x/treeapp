@@ -7,6 +7,7 @@
 module Handler.Areas where
 
 import Import
+import Text.Julius
 
 formAreas :: Form Areas
 formAreas = renderBootstrap $ Areas
@@ -24,6 +25,7 @@ getAreasCadastrarR = do
     mensagem <- getMessage
     defaultLayout $ do 
         addStylesheet $ StaticR css_bootstrap_css
+        toWidgetHead $(juliusFile "templates/areasCadastrar.julius")
         $(whamletFile "templates/areasCadastrar.hamlet") 
 
 postAreasCadastrarR :: Handler Html 
