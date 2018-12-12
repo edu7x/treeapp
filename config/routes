@@ -22,3 +22,4 @@
 /arvores/#ArvoresId/deletar                 ArvoresDeletarR         POST
 
 /usuario                                    UsuarioR                GET POST
+/login                                      LoginR                  GET POST
