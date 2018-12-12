@@ -1,0 +1,7 @@
+$maybe msg <- mensagem
+    <div class="alert alert-danger">
+        #{msg}
+
+<form action=@{AreasCadastrarR} method=post enctype=#{enctype}>
+    ^{widgetForm}
+    <input type="submit" value="Cadastrar">

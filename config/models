@@ -11,3 +11,13 @@ Equipamentos json
     sistemaOperacional  Text
     versaoSO            Text
     deriving Show
+
+Areas json        
+    descricao            Text
+    latitude1            Text
+    longitude1           Text
+    latitude2            Text
+    longitude2           Text
+    latitude3            Text
+    longitude3           Text
+    deriving Show

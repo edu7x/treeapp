@@ -12,3 +12,5 @@
 /equipamentos                               EquipamentosR           GET
 /equipamentos/cadastrar                     EquipamentosCadastrarR  GET POST
 /equipamentos/#EquipamentosId/deletar       EquipamentosDeletarR    POST
+
+/areas/cadastrar                            AreasCadastrarR         GET POST
