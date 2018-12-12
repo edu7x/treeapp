@@ -48,8 +48,8 @@ postAreasCadastrarR = do
                         <h1>
                             Area cadastrada com sucesso!
                     |]
-                    redirect AreasCadastrarR
-        _ -> redirect AreasCadastrarR
+                    redirect AreasR
+        _ -> redirect AreasR
 
 getAreasR :: Handler Html
 getAreasR = do 
