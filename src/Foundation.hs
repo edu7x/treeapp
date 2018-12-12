@@ -25,7 +25,12 @@ type Form a = Html -> MForm Handler (FormResult a, Widget)
 
 instance Yesod App where
     makeLogger = return . appLogger
-
+    authRoute _ = Just LoginR
+    isAuthorized HomeR _ = return Authorized
+    isAuthorized (StaticR _) _ = return Authorized
+    isAuthorized LoginR _ = return Authorized
+    isAuthorized UsuarioR _ = return Authorized
+    isAuthorized _ _ = ehUsuario
 
 instance YesodPersist App where
     type YesodPersistBackend App = SqlBackend
@@ -38,3 +43,10 @@ instance RenderMessage App FormMessage where
 
 instance HasHttpManager App where
     getHttpManager = appHttpManager
+
+ehUsuario :: Handler AuthResult
+ehUsuario = do 
+    logado <- lookupSession "_USR"
+    case logado of 
+        Just _ -> return Authorized
+        Nothing -> return AuthenticationRequired
