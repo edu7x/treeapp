@@ -15,4 +15,6 @@
 
 /areas                                      AreasR                  GET
 /areas/cadastrar                            AreasCadastrarR         GET POST
-/areas/#AreasId/deletar                     AreasDeletarR        POST
+/areas/#AreasId/deletar                     AreasDeletarR           POST
+
+/arvores/cadastrar                          ArvoresCadastrarR       GET POST

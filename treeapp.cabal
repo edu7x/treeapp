@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6c43b9ac890310347e2fa7a5fef83c5508a8986cca516835cfc2d4efe0f649af
+-- hash: 811f98ec07f80674d621781f6b88732bf474d1a9e60046ae5d2b9395a51daae9
 
 name:           treeapp
 version:        0.0.0
@@ -25,6 +25,7 @@ library
       Application
       Foundation
       Handler.Areas
+      Handler.Arvores
       Handler.Common
       Handler.Equipamentos
       Handler.Especies

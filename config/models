@@ -21,3 +21,14 @@ Areas json
     latitude3            Text
     longitude3           Text
     deriving Show
+    
+Arvores json
+    latitude            Double
+    longitude           Double
+    especie             EspeciesId
+    srid                Int
+    descricao           Text
+    acuracia            Text
+    altitude            Text
+    acuraciaAltitude    Text
+    deriving Show
