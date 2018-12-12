@@ -48,3 +48,10 @@ postAreasCadastrarR = do
                     |]
                     redirect AreasCadastrarR
         _ -> redirect AreasCadastrarR
+
+getAreasR :: Handler Html
+getAreasR = do 
+    areas <- runDB $ selectList [] [Asc AreasDescricao]
+    defaultLayout $ do 
+        addStylesheet $ StaticR css_bootstrap_css
+        $(whamletFile "templates/areas.hamlet")

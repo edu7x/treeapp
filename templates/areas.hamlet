@@ -1,0 +1,34 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Descrição
+            <th>
+                Latitude Ponto 1
+            <th>
+                Longitude Ponto 1
+            <th>
+                Latitude Ponto 2
+            <th>
+                Longitude Ponto 2
+            <th>
+                Latitude Ponto 3
+            <th>
+                Longitude Ponto 3
+    <tbody>
+        $forall (Entity _ area) <- areas
+            <tr>
+                <td>
+                    #{areasDescricao area}
+                <td>
+                    #{areasLatitude1 area}
+                <td>
+                    #{areasLongitude1 area}
+                <td>
+                    #{areasLatitude2 area}
+                <td>
+                    #{areasLongitude2 area}
+                <td>
+                    #{areasLatitude3 area}
+                <td>
+                    #{areasLongitude3 area}
