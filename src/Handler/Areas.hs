@@ -22,6 +22,7 @@ formAreas = renderBootstrap $ Areas
 getAreasCadastrarR :: Handler Html
 getAreasCadastrarR = do 
     (widgetForm, enctype) <- generateFormPost formAreas
+    logado <- lookupSession "_USR"
     mensagem <- getMessage
     defaultLayout $ do 
         addStylesheet $ StaticR css_bootstrap_css
