@@ -9,4 +9,5 @@
 /especies/cadastrar                 EspeciesCadastrarR      GET POST
 /especies/#EspeciesId/deletar       EspeciesDeletarR        POST
 
+/equipamentos                       EquipamentosR           GET
 /equipamentos/cadastrar             EquipamentosCadastrarR  GET POST

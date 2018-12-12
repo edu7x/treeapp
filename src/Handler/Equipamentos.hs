@@ -45,5 +45,12 @@ postEquipamentosCadastrarR = do
                         <h1>
                             Equipamento cadastrado com sucesso!
                     |]
-                    redirect EquipamentosCadastrarR
-        _ -> redirect EquipamentosCadastrarR
+                    redirect EquipamentosR
+        _ -> redirect EquipamentosR
+        
+getEquipamentosR :: Handler Html
+getEquipamentosR = do 
+    equipamentos <- runDB $ selectList [] [Asc EquipamentosModelo]
+    defaultLayout $ do 
+        addStylesheet $ StaticR css_bootstrap_css
+        $(whamletFile "templates/equipamentos.hamlet")

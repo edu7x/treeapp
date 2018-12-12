@@ -1,0 +1,23 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Descrição
+            <th>
+                Modelo
+            <th>
+                Sistema Operacional
+            <th>
+                Versão
+
+    <tbody>
+        $forall (Entity _ equipamento) <- equipamentos
+            <tr>
+                <td>
+                    #{equipamentosDescricao equipamento}
+                <td>
+                    #{equipamentosModelo equipamento}
+                <td>
+                    #{equipamentosSistemaOperacional equipamento}
+                <td>
+                    #{equipamentosVersaoSO equipamento}
